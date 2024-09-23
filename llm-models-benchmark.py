@@ -1,6 +1,7 @@
 import requests
 import time
-!pip install pandas
+#install pandas:
+# pip install pandas
 import pandas as pd
 
 API_KEY = 'AnythingLLM_API_KEY'
@@ -40,7 +41,7 @@ def main():
         result, exec_time = measure_execution_time(post_to_anythingllm, workspace, message)
         
         if result is not None and "Request failed" not in result:
-            results.append({"Workspace": workspace, "Result": result, "Execution Time (seconds)": f"{exec_time:.4f}"})
+            results.append({"Workspace": workspace, "Result": result, "Execution Time (seconds)": f"{exec_time:.2f}"})
         else:
             print(f"Failed to get a valid response from {workspace}")
 
