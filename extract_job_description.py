@@ -3,7 +3,7 @@ import time
 import json
 
 API_URL = "http://localhost:3001/api/v1/workspace/llama3-dot-2/chat"
-API_KEY = "ZC00WDG-QK14MDV-GM3AWHR-NEHAYFX"
+API_KEY = "anything llm key"
 def extract_job_desc(input):
     headers = {
         "Authorization": f"Bearer {API_KEY}",
