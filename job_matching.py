@@ -62,7 +62,7 @@ def classify_similarity(score):
 for i, score in enumerate(cosine_similarities[0]):
     match_strength = classify_similarity(score)
     cosine_degree = cosine_to_degree(score)
-    print(f"Job: {job_postings[i]['company_name']} - Similarity Score: {score:.4f} - {match_strength} - Cosine Degree: {cosine_degree:.2f}°")
+    print(f"Job: {job_postings[i]['company_name']} - Similarity Score: {score:.4f} - {match_strength}")
 
 # Step 9: Identify the best match
 best_match_index = cosine_similarities[0].argmax()
@@ -70,4 +70,4 @@ best_match = job_postings[best_match_index]
 best_match_strength = classify_similarity(cosine_similarities[0][best_match_index])
 best_match_degree = cosine_to_degree(cosine_similarities[0][best_match_index])
 
-print(f"\nBest job match for the resume is: {best_match['company_name']} with a similarity score of {cosine_similarities[0][best_match_index]:.4f} ({best_match_strength}) - Cosine Degree: {best_match_degree:.2f}°")
+print(f"\nBest job match for the resume is: {best_match['company_name']} with a similarity score of {cosine_similarities[0][best_match_index]:.4f} ({best_match_strength})")
